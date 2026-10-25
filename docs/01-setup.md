@@ -65,6 +65,7 @@
 6. Unity を閉じて、GitHub Desktop を見る
    - 左に、変わったファイルの一覧が出ます。`Game/Assets`・`Game/Packages`・`Game/ProjectSettings` の中のファイルなら OK です。
    - **`Game/Library` のファイルが出ていたら、そこで止めて先生に聞いてください。** 入れてはいけない大きいフォルダです。何千個もファイルが出ている時も同じです。
+   - 何も出ない時は、[困った時](04-trouble.md) の「GitHub Desktop の左側に、変わったファイルが出ない」を見てください。
 7. 左下の「Summary」に「Unity のプロジェクトを作る」と書いて「Commit to main」を押す
 8. 上の「Push origin」を押す
 9. README の「Unity のバージョン」を書く
@@ -75,6 +76,7 @@
 ## 5. Unity で開く（リーダー以外）
 
 1. GitHub Desktop で「Fetch origin」→「Pull origin」を押す（リーダーが作った `Game` フォルダが届きます）
+   - 届かない時は、[困った時](04-trouble.md) の「リーダー以外の人の PC に、`Game` フォルダが届かない」を見てください。
 2. Unity Hub →「Add（追加）」→「Add project from disk（ディスクから加える）」
 3. clone したフォルダの中の **`Game` フォルダ**を選ぶ
 4. 一覧に出た `Game` を押して開く

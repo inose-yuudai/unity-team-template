@@ -2,6 +2,40 @@
 
 わからない時は、無理に進めず、仲間か先生に聞きましょう。
 
+## GitHub Desktop の左側に、変わったファイルが出ない
+
+上から順に確かめます。
+
+1. **「Changes」のタブを見ているか**
+   - 左上の「Changes」と「History」のうち、「Changes」を押します。
+2. **チームのリポジトリを開いているか**
+   - 左上の「Current Repository」が、チームのリポジトリの名前になっているか見ます。違う時は、押して選び直します。
+3. **Unity で保存したか**
+   - Unity で「File」→「Save」（シーンの保存）と、「File」→「Save Project」（そのほかの変更の保存）を押します。
+   - 保存したら、GitHub Desktop の画面を一度クリックします。一覧が新しくなります。
+4. **もうコミットしていないか**
+   - 「History」のタブに自分のコミットがあれば、コミットは済んでいます。上の「Push origin」を押せば大丈夫です。
+5. **Unity のプロジェクトが、clone したフォルダの中にあるか**（Unity のプロジェクトを作った直後は、これがいちばん多い原因です）
+   - GitHub Desktop の上のメニュー「Repository」→「Show in Finder」（Windows は「Show in Explorer」）を押すと、clone したフォルダが開きます。
+   - その中に `Game` フォルダがなければ、Unity のプロジェクトは別の場所に作られています。
+   - 本当の場所は、Unity Hub のプロジェクトの一覧で `Game` の右の「…」→「Show in Finder」（Windows は「Show in Explorer」）を押すとわかります。
+
+### プロジェクトが別の場所にできていた時の直し方
+
+まだ 1 回もコミットしていない時のやり方です。
+
+1. Unity を閉じる
+2. `Game` フォルダを**フォルダごと**、clone したフォルダの中に動かす
+   - フォルダごと動かすのは大丈夫です。（`Assets` の中のファイルを 1 つずつ動かすのはダメです。）
+3. Unity Hub の一覧で、古い `Game` の右の「…」→「Remove project from list」を押して、一覧から外す
+4. 「Add」→「Add project from disk」で、動かした `Game` フォルダを選ぶ
+5. GitHub Desktop の左側に、`Game/Assets` などのファイルが出たか見る
+
+## リーダー以外の人の PC に、`Game` フォルダが届かない
+
+- GitHub Desktop で「Fetch origin」→「Pull origin」を押したか確かめます。
+- それでも届かない時は、リーダーが「Push origin」まで押したか聞きましょう。GitHub のリポジトリのページに `Game` フォルダが見えていれば、Push は済んでいます。
+
 ## コンフリクトが出た
 
 GitHub Desktop に「Resolve conflicts before merging」と出ます。あわてなくて大丈夫です。
