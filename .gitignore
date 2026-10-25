@@ -1,0 +1,102 @@
+# ============================================================
+# Git に入れないファイルの一覧（Unity のチーム開発用）
+#
+# Unity のプロジェクトは、このリポジトリの中の 1 つ下のフォルダ
+# （例：Game/）に作る前提です。そのため、GitHub 公式の
+# Unity.gitignore の「/Library/」などを「/*/Library/」に書き換えています。
+# 元：https://github.com/github/gitignore/blob/main/Unity.gitignore
+# ============================================================
+
+# --- Unity が自動で作るフォルダ（大きい・PC ごとに違う） ---
+/*/.utmp/
+/*/[Ll]ibrary/
+/*/[Tt]emp/
+/*/[Oo]bj/
+/*/[Bb]uild/
+/*/[Bb]uilds/
+/*/[Ll]ogs/
+/*/[Uu]ser[Ss]ettings/
+/*/[Mm]emoryCaptures/
+/*/[Rr]ecordings/
+/*/UIElementsSchema/
+/*/ServerData
+*.log
+
+# 間違えてリポジトリの一番上に Unity のプロジェクトを作った時の保険
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# --- Blender の予備ファイル ---
+*.blend1
+*.blend1.meta
+
+# --- アセットストアのツール（使う時はコメントを外す） ---
+# /*/[Aa]ssets/AssetStoreTools*
+
+# --- エディター（Visual Studio・Rider・VS Code）が作るファイル ---
+/*/[Aa]ssets/Plugins/Editor/JetBrains*
+*.DotSettings.user
+.vs/
+.vscode/
+.idea/
+.gradle/
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# --- クラッシュの記録など ---
+sysinfo.txt
+mono_crash.*
+crashlytics-build.properties
+
+# --- ビルドしてできたファイル ---
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+
+# --- テストで自動で作られるシーン ---
+InitTestScene*.unity*
+/*/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# --- Addressables（使う時だけ関係あり） ---
+/*/[Aa]ssets/StreamingAssets/aa*
+/*/[Aa]ssets/AddressableAssetsData/link.xml*
+/*/[Aa]ssets/Addressables_Temp*
+/*/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# --- Visual Scripting が自動で作るファイル ---
+/*/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/*/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/*/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/*/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# --- Assets の中に自動で作られるキャッシュ ---
+/*/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# --- Mac・Windows が勝手に作るファイル ---
+.DS_Store
+._*
+Thumbs.db
+desktop.ini

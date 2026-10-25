@@ -1,0 +1,85 @@
+# ============================================================
+# ファイルの種類ごとの扱い（Windows と Mac が混ざっても大丈夫にする）
+# ============================================================
+
+# 改行コードを Git が自動でそろえる
+* text=auto
+
+# Unity が作るテキストのファイルは、どの PC でも改行を LF にそろえる
+*.unity text eol=lf
+*.prefab text eol=lf
+*.asset text eol=lf
+*.meta text eol=lf
+*.mat text eol=lf
+*.anim text eol=lf
+*.controller text eol=lf
+*.overrideController text eol=lf
+*.physicMaterial text eol=lf
+*.physicsMaterial2D text eol=lf
+*.playable text eol=lf
+*.mask text eol=lf
+*.brush text eol=lf
+*.flare text eol=lf
+*.fontsettings text eol=lf
+*.guiskin text eol=lf
+*.giparams text eol=lf
+*.renderTexture text eol=lf
+*.spriteatlas text eol=lf
+*.terrainlayer text eol=lf
+*.mixer text eol=lf
+*.shadervariants text eol=lf
+*.preset text eol=lf
+*.lighting text eol=lf
+*.inputactions text eol=lf
+*.uxml text eol=lf
+*.uss text eol=lf
+*.cs text diff=csharp
+*.shader text
+*.json text
+*.md text
+
+# 中身を文字で見比べられないファイル（画像・音・3D モデルなど）
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.psd binary
+*.tga binary
+*.tif binary
+*.tiff binary
+*.bmp binary
+*.exr binary
+*.hdr binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.aif binary
+*.aiff binary
+*.flac binary
+*.fbx binary
+*.obj binary
+*.blend binary
+*.dae binary
+*.ttf binary
+*.otf binary
+*.mp4 binary
+*.mov binary
+*.webm binary
+*.zip binary
+*.7z binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.pdf binary
+
+# ------------------------------------------------------------
+# 大きいファイルを Git LFS で扱う時（先生と相談してから）
+# 使う時は、下の行の先頭の「# 」を消してコミットする。
+# GitHub Desktop が LFS を自動で用意してくれる。
+# GitHub の LFS は、使える容量に上限があるので注意。
+# ------------------------------------------------------------
+# *.psd filter=lfs diff=lfs merge=lfs -text
+# *.wav filter=lfs diff=lfs merge=lfs -text
+# *.fbx filter=lfs diff=lfs merge=lfs -text
+# *.blend filter=lfs diff=lfs merge=lfs -text
+# *.mp4 filter=lfs diff=lfs merge=lfs -text
